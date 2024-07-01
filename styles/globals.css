@@ -1,0 +1,28 @@
+@tailwind base;
+h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+  a {
+     @apply text-blue-600 underline;
+  }
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .heroButton{
+        @apply px-6 py-2 border border-[#212529] rounded-full 
+        uppercase text-xs tracking-widest text-[#e0afa0]
+        transition-all hover:border-[#e0afa0]/40 hover:text-[#e0afa0]/40
+    }
+    .contactInput{
+      @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424]
+      text-gray-500 placeholder-gray-500 transition-all focus:border-[#e0afa0]/40
+      focus:text-[#e0afa0]/40 hover:border-[#e0afa0]/40
+    }
+}
