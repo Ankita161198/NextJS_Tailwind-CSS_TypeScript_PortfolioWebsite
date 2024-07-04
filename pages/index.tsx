@@ -16,6 +16,7 @@ import { fetchExperiences } from "@/utils/fetchExperiences";
 import { fetchProjects } from "@/utils/fetchProjects";
 import { fetchSkills } from "@/utils/fetchSkills";
 import { fetchSocials } from "@/utils/fetchSocials";
+import dynamic from "next/dynamic";
 
 type Props = {
   pageInfo: PageInfo;
@@ -75,7 +76,8 @@ const Home: React.FC<Props> = ({ pageInfo, experiences, projects, skills, social
   );
 }
 
-export default Home;
+  // export default Home;
+export default dynamic(() => Promise.resolve(Home), { ssr: false });
 
 export const getStaticProps: GetServerSideProps<Props> = async () => {
   
