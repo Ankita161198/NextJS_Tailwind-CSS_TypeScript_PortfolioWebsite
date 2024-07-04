@@ -77,7 +77,7 @@ const Home: React.FC<Props> = ({ pageInfo, experiences, projects, skills, social
 
 export default Home;
 
-export const getStaticProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   
     const pageInfo: PageInfo = await fetchPageInfo();
     const experiences: Experience[] = await fetchExperiences();

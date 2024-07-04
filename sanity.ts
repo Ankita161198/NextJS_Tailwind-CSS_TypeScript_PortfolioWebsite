@@ -1,6 +1,8 @@
 import { createClient } from "@sanity/client";
 import createImageUrlBuilder from '@sanity/image-url'
 
+
+console.log('Sanity Project ID:', process.env.NEXT_PUBLIC_SANITY_PROJECT_ID);
 export const config={
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || "production",
     projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "",
