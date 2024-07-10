@@ -30,6 +30,7 @@ const Home: React.FC<Props> = ({ pageInfo, experiences, projects, skills, social
   return (
     <div className="bg-[#212529] h-screen text-[#e0afa0] snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-[#2f353a]-400/20 scrollbar-thumb-[#e0afa0]/80">
       <Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>My Portfolio</title>
       </Head>
       

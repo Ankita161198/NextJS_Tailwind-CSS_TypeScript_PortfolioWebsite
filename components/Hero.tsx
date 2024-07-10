@@ -22,15 +22,15 @@ export default function Hero({pageInfo}: Props) {
   return (
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <Backgroundcircles />
-      <img className='relative rounded-full h-36 w-36 mx-auto object-cover'
+      <img className='relative rounded-full h-20 w-20 md:h-36 md:w-36 mx-auto object-cover'
        src={urlFor(pageInfo.heroImage).url()} alt='dp' />
       <div className='z-20'>
-        <h2 className='text-sm uppercase text-[#e0afa0] pb-2 tracking-[15px]'>{pageInfo.role}</h2>
-        <h1 className='text-5xl  lg:text-6xl font-semibold px-10'>
+        <h2 className='text-sm md:text-lg uppercase text-[#e0afa0] pb-2 tracking-[6px] md:tracking-[15px]'>{pageInfo.role}</h2>
+        <h1 className=' text-xl md:text-5xl  lg:text-6xl font-semibold px-10'>
           <span className='mr-1' style={{ color: '#e0afa0' }}>{text}</span>
           <Cursor cursorColor='#F7AB0A' />
         </h1>
-        <div className='pt-5'>
+        <div className='pt-10 md:pd-5'>
           <Link href='#about'><button className='heroButton'>About</button></Link>
           <Link href='#experience'><button className='heroButton'>Experience</button></Link>
           <Link href='#skills'><button className='heroButton'>Skills</button></Link>
